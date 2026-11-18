@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lulz-security-toolkit"
+version = "1.0.1"
+description = "Passive web posture checks, local source review and OSV dependency auditing"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+readme = "README.md"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+]
+
+[project.scripts]
+lulz = "lulz.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["lulz*"]
